@@ -473,7 +473,7 @@
             align-items: flex-start;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1100px) {
             .arch-main-layout {
                 flex-direction: column;
             }
@@ -512,15 +512,6 @@
             height: 16px;
             background: linear-gradient(180deg, #D2691E, #CD853F);
             border-radius: 2px;
-        }
-
-        .layer-title .layer-tag {
-            font-size: 11px;
-            padding: 2px 8px;
-            background: rgba(139, 69, 19, 0.1);
-            border-radius: 10px;
-            color: #A0522D;
-            font-weight: 500;
         }
 
         .layer-cards {
@@ -582,14 +573,6 @@
             font-family: 'SF Mono', Monaco, monospace;
         }
 
-        .arch-card-desc {
-            font-size: 10px;
-            color: #888;
-            margin-top: 6px;
-            padding-top: 6px;
-            border-top: 1px dashed #e8e0d5;
-        }
-
         .layer-external .arch-card {
             background: linear-gradient(180deg, #fffaf5 0%, #fff5eb 100%);
             border-color: #f0d9c4;
@@ -607,55 +590,15 @@
             height: 1px;
             background: linear-gradient(90deg, transparent, #e8ddd0, transparent);
             margin: 16px 0;
-            position: relative;
-        }
-
-        .layer-divider::after {
-            content: '↓';
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background: #fef9f3;
-            padding: 0 10px;
-            color: #ccc;
-            font-size: 12px;
-        }
-
-        /* 数据流箭头 */
-        .data-flow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 8px;
-            margin: 16px 0;
-            color: #D2691E;
-            font-size: 12px;
-        }
-
-        .data-flow-arrow {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, #D2691E, #CD853F);
-            position: relative;
-        }
-
-        .data-flow-arrow::after {
-            content: '';
-            position: absolute;
-            right: 0;
-            top: -4px;
-            border: 5px solid transparent;
-            border-left-color: #CD853F;
         }
 
         /* 右侧指标面板 */
         .metrics-panel {
-            width: 240px;
+            width: 200px;
             flex-shrink: 0;
         }
 
-        @media (max-width: 1200px) {
+        @media (max-width: 1100px) {
             .metrics-panel {
                 width: 100%;
                 display: grid;
@@ -672,10 +615,6 @@
 
         .metrics-group {
             margin-bottom: 20px;
-            background: #fff;
-            border-radius: 12px;
-            padding: 16px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
         .metrics-group:last-child {
@@ -683,12 +622,11 @@
         }
 
         .metrics-group-title {
-            font-size: 12px;
-            color: #8B4513;
-            font-weight: 600;
-            margin-bottom: 12px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid #f0e6d9;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+            padding-bottom: 6px;
+            border-bottom: 1px dashed #e0e0e0;
         }
 
         .metric-item {
@@ -696,8 +634,8 @@
             align-items: center;
             gap: 8px;
             padding: 8px 0;
-            font-size: 12px;
-            color: #555;
+            font-size: 13px;
+            color: #444;
             border-bottom: 1px solid #f5f5f5;
             transition: all 0.2s ease;
         }
@@ -711,8 +649,8 @@
         }
 
         .metric-dot {
-            width: 6px;
-            height: 6px;
+            width: 5px;
+            height: 5px;
             border-radius: 50%;
             background: #D2691E;
             flex-shrink: 0;
@@ -722,7 +660,6 @@
         .metric-dot.blue { background: #3b82f6; }
         .metric-dot.purple { background: #8b5cf6; }
         .metric-dot.orange { background: #f59e0b; }
-        .metric-dot.red { background: #ef4444; }
 
         /* 底部MoS */
         .arch-footer {
@@ -796,239 +733,6 @@
         .page-title p {
             font-size: 14px;
             color: #888;
-        }
-
-        /* ==================== 验收标准样式 ==================== */
-        .acceptance-section {
-            margin-top: 30px;
-            background: linear-gradient(135deg, #1a1f2e 0%, #0d1320 100%);
-            border-radius: 16px;
-            padding: 30px;
-            color: #e8eefc;
-        }
-
-        .acceptance-title {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 24px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            color: #fff;
-        }
-
-        .acceptance-title::before {
-            content: '✓';
-            width: 28px;
-            height: 28px;
-            background: linear-gradient(135deg, #10b981, #06b6d4);
-            border-radius: 6px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-        }
-
-        .acceptance-table {
-            width: 100%;
-            border-collapse: separate;
-            border-spacing: 0;
-            font-size: 13px;
-        }
-
-        .acceptance-table thead th {
-            background: rgba(255, 255, 255, 0.08);
-            color: #a9b8dd;
-            text-align: left;
-            padding: 14px 16px;
-            font-weight: 600;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .acceptance-table thead th:first-child {
-            border-radius: 8px 0 0 0;
-        }
-
-        .acceptance-table thead th:last-child {
-            border-radius: 0 8px 0 0;
-        }
-
-        .acceptance-table tbody td {
-            padding: 14px 16px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-            color: #c9d4f0;
-            vertical-align: top;
-        }
-
-        .acceptance-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .acceptance-table tbody tr:last-child td:first-child {
-            border-radius: 0 0 0 8px;
-        }
-
-        .acceptance-table tbody tr:last-child td:last-child {
-            border-radius: 0 0 8px 0;
-        }
-
-        .acceptance-table .category {
-            font-weight: 600;
-            color: #7aa2ff;
-            white-space: nowrap;
-        }
-
-        .acceptance-table .check-item {
-            color: #55d6be;
-            font-weight: 500;
-        }
-
-        .acceptance-table .status {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            padding: 4px 10px;
-            background: rgba(16, 185, 129, 0.15);
-            border: 1px solid rgba(16, 185, 129, 0.3);
-            border-radius: 12px;
-            color: #10b981;
-            font-size: 11px;
-            font-weight: 600;
-        }
-
-        /* 模型选型详情 */
-        .model-detail-section {
-            margin-top: 30px;
-        }
-
-        .model-detail-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        @media (max-width: 900px) {
-            .model-detail-grid { grid-template-columns: 1fr; }
-        }
-
-        .model-detail-card {
-            background: #fff;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-        }
-
-        .model-detail-header {
-            padding: 18px 20px;
-            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
-            color: #fff;
-        }
-
-        .model-detail-header h4 {
-            font-size: 15px;
-            margin-bottom: 4px;
-        }
-
-        .model-detail-header span {
-            font-size: 12px;
-            opacity: 0.85;
-        }
-
-        .model-detail-body {
-            padding: 20px;
-        }
-
-        .model-eval-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 0;
-            border-bottom: 1px solid #f5f0eb;
-            font-size: 13px;
-        }
-
-        .model-eval-item:last-child {
-            border-bottom: none;
-        }
-
-        .model-eval-label {
-            color: #666;
-        }
-
-        .model-eval-value {
-            font-weight: 600;
-            color: #333;
-        }
-
-        .model-eval-value.good {
-            color: #10b981;
-        }
-
-        .model-eval-value.medium {
-            color: #f59e0b;
-        }
-
-        /* 系统集成标注 */
-        .integration-section {
-            margin-top: 30px;
-            background: #fff;
-            border-radius: 16px;
-            padding: 24px;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-        }
-
-        .integration-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
-        @media (max-width: 700px) {
-            .integration-grid { grid-template-columns: 1fr; }
-        }
-
-        .integration-item {
-            display: flex;
-            gap: 16px;
-            padding: 16px;
-            background: linear-gradient(135deg, #fef9f3 0%, #fdf6ed 100%);
-            border-radius: 12px;
-            border-left: 4px solid #D2691E;
-        }
-
-        .integration-icon {
-            width: 44px;
-            height: 44px;
-            background: linear-gradient(135deg, #D2691E, #CD853F);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            flex-shrink: 0;
-        }
-
-        .integration-content h5 {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 4px;
-        }
-
-        .integration-content p {
-            font-size: 12px;
-            color: #666;
-        }
-
-        .integration-content .api-tag {
-            display: inline-block;
-            margin-top: 8px;
-            padding: 3px 10px;
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.2);
-            border-radius: 12px;
-            font-size: 11px;
-            color: #3b82f6;
-            font-family: 'SF Mono', Monaco, monospace;
         }
     </style>
 </head>
@@ -1403,178 +1107,151 @@
     <div id="architecture" class="tab-content">
         <div class="page-title">
             <h1>技术架构图</h1>
-            <p>四层架构：前端层 → 应用层 → 数据层 → 模型层 | 满足验收标准要求</p>
+            <p>Case识别归属 → 报告生成 → 向量化入库 → 语义检索与推荐</p>
         </div>
 
         <div class="arch-main-layout">
             <!-- 左侧架构图 -->
             <div class="arch-container">
-
-                <!-- 前端层 -->
+                <!-- 用户层 -->
                 <div class="arch-layer">
-                    <div class="layer-title">
-                        前端层 (维修平板功能入口)
-                        <span class="layer-tag">用户交互</span>
-                    </div>
+                    <div class="layer-title">用户层 (维修平板功能入口)</div>
                     <div class="layer-cards">
                         <div class="arch-card">
                             <div class="arch-card-icon">🔧</div>
                             <div class="arch-card-title">维修技师</div>
                             <div class="arch-card-subtitle">Technician</div>
-                            <div class="arch-card-desc">案例录入/查询</div>
                         </div>
                         <div class="arch-card highlight">
                             <div class="arch-card-icon">💬</div>
                             <div class="arch-card-title">案例识别入口</div>
                             <div class="arch-card-subtitle">Case Identify</div>
-                            <div class="arch-card-desc">日志上传/识别触发</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">📋</div>
                             <div class="arch-card-title">门店顾问</div>
                             <div class="arch-card-subtitle">Store Advisor</div>
-                            <div class="arch-card-desc">报告审核/发布</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">📊</div>
                             <div class="arch-card-title">数据管理员</div>
                             <div class="arch-card-subtitle">Data Admin</div>
-                            <div class="arch-card-desc">批量导入/管理</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="layer-divider"></div>
 
-                <!-- 应用层 -->
+                <!-- 模型应用层 -->
                 <div class="arch-layer">
-                    <div class="layer-title">
-                        应用层 (AI能力编排)
-                        <span class="layer-tag">业务逻辑</span>
-                    </div>
+                    <div class="layer-title">模型应用层</div>
                     <div class="layer-cards">
                         <div class="arch-card">
                             <div class="arch-card-icon">🔍</div>
-                            <div class="arch-card-title">意图识别</div>
-                            <div class="arch-card-subtitle">Intent Recognition</div>
-                            <div class="arch-card-desc">用户查询意图分类</div>
+                            <div class="arch-card-title">输入解析</div>
+                            <div class="arch-card-subtitle">Input Parser</div>
                         </div>
                         <div class="arch-card highlight">
                             <div class="arch-card-icon">🏷️</div>
                             <div class="arch-card-title">案例识别归类</div>
                             <div class="arch-card-subtitle">Case Classifier</div>
-                            <div class="arch-card-desc">新案例/复用判别</div>
                         </div>
                         <div class="arch-card highlight">
                             <div class="arch-card-icon">📝</div>
                             <div class="arch-card-title">报告生成</div>
                             <div class="arch-card-subtitle">Report Agent</div>
-                            <div class="arch-card-desc">结构化报告生成</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">🔎</div>
-                            <div class="arch-card-title">RAG检索</div>
+                            <div class="arch-card-title">智能检索</div>
                             <div class="arch-card-subtitle">RAG Pipeline</div>
-                            <div class="arch-card-desc">语义相似案例召回</div>
-                        </div>
-                    </div>
-                    <!-- 第二行应用层组件 -->
-                    <div class="layer-cards" style="margin-top: 12px;">
-                        <div class="arch-card">
-                            <div class="arch-card-icon">⚙️</div>
-                            <div class="arch-card-title">编排引擎</div>
-                            <div class="arch-card-subtitle">Orchestrator</div>
-                            <div class="arch-card-desc">工作流调度管理</div>
-                        </div>
-                        <div class="arch-card">
-                            <div class="arch-card-icon">🔐</div>
-                            <div class="arch-card-title">API网关</div>
-                            <div class="arch-card-subtitle">Gateway/Auth</div>
-                            <div class="arch-card-desc">认证/限流/路由</div>
-                        </div>
-                        <div class="arch-card">
-                            <div class="arch-card-icon">📜</div>
-                            <div class="arch-card-title">审计日志</div>
-                            <div class="arch-card-subtitle">Audit Log</div>
-                            <div class="arch-card-desc">操作记录/合规审计</div>
-                        </div>
-                        <div class="arch-card">
-                            <div class="arch-card-icon">📈</div>
-                            <div class="arch-card-title">可观测性</div>
-                            <div class="arch-card-subtitle">Observability</div>
-                            <div class="arch-card-desc">监控/日志/Trace</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="layer-divider"></div>
 
-                <!-- 数据层 -->
+                <!-- 外部依赖层 -->
                 <div class="arch-layer layer-external">
-                    <div class="layer-title">
-                        数据层 (存储与知识)
-                        <span class="layer-tag">数据管理</span>
-                    </div>
+                    <div class="layer-title">外部依赖层</div>
                     <div class="layer-cards">
                         <div class="arch-card">
                             <div class="arch-card-icon">🗄️</div>
                             <div class="arch-card-title">向量数据库</div>
                             <div class="arch-card-subtitle">Milvus/FAISS</div>
-                            <div class="arch-card-desc">案例向量索引存储</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">🕸️</div>
                             <div class="arch-card-title">知识图谱</div>
                             <div class="arch-card-subtitle">Neo4j/Nebula</div>
-                            <div class="arch-card-desc">故障-部件关联</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">💾</div>
                             <div class="arch-card-title">对象存储</div>
                             <div class="arch-card-subtitle">MinIO/OSS</div>
-                            <div class="arch-card-desc">日志/报告/截图</div>
                         </div>
                         <div class="arch-card">
-                            <div class="arch-card-icon">🗃️</div>
-                            <div class="arch-card-title">关系型数据库</div>
-                            <div class="arch-card-subtitle">MySQL</div>
-                            <div class="arch-card-desc">结构化业务数据</div>
+                            <div class="arch-card-icon">🔐</div>
+                            <div class="arch-card-title">API网关</div>
+                            <div class="arch-card-subtitle">Gateway/Auth</div>
                         </div>
                     </div>
                 </div>
 
                 <div class="layer-divider"></div>
 
-                <!-- 模型层 -->
+                <!-- 模型服务层 -->
                 <div class="arch-layer">
-                    <div class="layer-title">
-                        模型层 (AI模型服务)
-                        <span class="layer-tag">智能引擎</span>
-                    </div>
+                    <div class="layer-title">模型服务层</div>
                     <div class="layer-cards">
                         <div class="arch-card highlight">
                             <div class="arch-card-icon">🧠</div>
                             <div class="arch-card-title">大语言模型</div>
                             <div class="arch-card-subtitle">GPT-4o</div>
-                            <div class="arch-card-desc">理解/生成/推理</div>
+                        </div>
+                        <div class="arch-card">
+                            <div class="arch-card-icon">📐</div>
+                            <div class="arch-card-title">判别式模型</div>
+                            <div class="arch-card-subtitle">Discriminative</div>
                         </div>
                         <div class="arch-card highlight">
                             <div class="arch-card-icon">📊</div>
                             <div class="arch-card-title">向量化模型</div>
                             <div class="arch-card-subtitle">BGE-M3</div>
-                            <div class="arch-card-desc">文本向量嵌入</div>
-                        </div>
-                        <div class="arch-card highlight">
-                            <div class="arch-card-icon">🔄</div>
-                            <div class="arch-card-title">重排序模型</div>
-                            <div class="arch-card-subtitle">BGE-Reranker</div>
-                            <div class="arch-card-desc">召回结果精排</div>
                         </div>
                         <div class="arch-card">
-                            <div class="arch-card-icon">📐</div>
-                            <div class="arch-card-title">判别式模型</div>
-                            <div class="arch-card-subtitle">Classifier</div>
-                            <div class="arch-card-desc">意图/分类判别</div>
+                            <div class="arch-card-icon">🔄</div>
+                            <div class="arch-card-title">重排序模型</div>
+                            <div class="arch-card-subtitle">ReRank Model</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="layer-divider"></div>
+
+                <!-- 数据接入层 -->
+                <div class="arch-layer">
+                    <div class="layer-title">数据接入层</div>
+                    <div class="layer-cards">
+                        <div class="arch-card">
+                            <div class="arch-card-icon">📑</div>
+                            <div class="arch-card-title">工单系统</div>
+                            <div class="arch-card-subtitle">Work Order API</div>
+                        </div>
+                        <div class="arch-card">
+                            <div class="arch-card-icon">📜</div>
+                            <div class="arch-card-title">日志采集</div>
+                            <div class="arch-card-subtitle">Log Collector</div>
+                        </div>
+                        <div class="arch-card">
+                            <div class="arch-card-icon">🔬</div>
+                            <div class="arch-card-title">诊断扫描</div>
+                            <div class="arch-card-subtitle">Diagnostic Scan</div>
+                        </div>
+                        <div class="arch-card">
+                            <div class="arch-card-icon">📡</div>
+                            <div class="arch-card-title">车辆数据流</div>
+                            <div class="arch-card-subtitle">Vehicle Stream</div>
                         </div>
                     </div>
                 </div>
@@ -1583,262 +1260,70 @@
 
                 <!-- 基础设施层 -->
                 <div class="arch-layer">
-                    <div class="layer-title">
-                        基础设施层 (运行环境)
-                        <span class="layer-tag">基础支撑</span>
-                    </div>
+                    <div class="layer-title">基础设施层</div>
                     <div class="layer-cards">
                         <div class="arch-card">
                             <div class="arch-card-icon">☸️</div>
                             <div class="arch-card-title">Kubernetes</div>
-                            <div class="arch-card-subtitle">容器编排</div>
-                            <div class="arch-card-desc">服务部署/扩缩容</div>
+                            <div class="arch-card-subtitle">容器集群</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">🎮</div>
                             <div class="arch-card-title">GPU资源池</div>
                             <div class="arch-card-subtitle">NVidia/Ascend</div>
-                            <div class="arch-card-desc">模型推理加速</div>
                         </div>
                         <div class="arch-card">
                             <div class="arch-card-icon">☁️</div>
                             <div class="arch-card-title">云服务器</div>
                             <div class="arch-card-subtitle">ECS/VM</div>
-                            <div class="arch-card-desc">计算资源</div>
                         </div>
                         <div class="arch-card">
-                            <div class="arch-card-icon">📡</div>
-                            <div class="arch-card-title">消息队列</div>
-                            <div class="arch-card-subtitle">Kafka/RabbitMQ</div>
-                            <div class="arch-card-desc">异步任务处理</div>
+                            <div class="arch-card-icon">🗃️</div>
+                            <div class="arch-card-title">关系型数据库</div>
+                            <div class="arch-card-subtitle">MySQL</div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <!-- 右侧指标面板 -->
             <div class="metrics-panel">
                 <div class="metrics-group">
-                    <div class="metrics-group-title">前端层指标</div>
+                    <div class="metrics-group-title">用户体验指标</div>
                     <div class="metric-item"><span class="metric-dot green"></span>终端响应流畅度</div>
                     <div class="metric-item"><span class="metric-dot green"></span>业务可达性</div>
-                    <div class="metric-item"><span class="metric-dot green"></span>用户操作转化率</div>
+                    <div class="metric-item"><span class="metric-dot green"></span>会话分析</div>
                 </div>
 
                 <div class="metrics-group">
                     <div class="metrics-group-title">应用层指标</div>
-                    <div class="metric-item"><span class="metric-dot blue"></span>意图识别准确率</div>
                     <div class="metric-item"><span class="metric-dot blue"></span>案例识别准确率</div>
                     <div class="metric-item"><span class="metric-dot blue"></span>报告生成耗时</div>
-                    <div class="metric-item"><span class="metric-dot blue"></span>API响应延迟P99</div>
+                    <div class="metric-item"><span class="metric-dot blue"></span>推理逻辑一致性</div>
+                    <div class="metric-item"><span class="metric-dot blue"></span>异常处理</div>
                 </div>
 
                 <div class="metrics-group">
-                    <div class="metrics-group-title">数据层指标</div>
+                    <div class="metrics-group-title">依赖层指标</div>
                     <div class="metric-item"><span class="metric-dot purple"></span>向量库可用性</div>
                     <div class="metric-item"><span class="metric-dot purple"></span>知识图谱完整度</div>
-                    <div class="metric-item"><span class="metric-dot purple"></span>数据同步延迟</div>
+                    <div class="metric-item"><span class="metric-dot purple"></span>工具可用性</div>
                 </div>
 
                 <div class="metrics-group">
-                    <div class="metrics-group-title">模型层指标</div>
+                    <div class="metrics-group-title">模型服务指标</div>
                     <div class="metric-item"><span class="metric-dot orange"></span>模型服务稳定性</div>
-                    <div class="metric-item"><span class="metric-dot orange"></span>Recall@5 ≥ 85%</div>
-                    <div class="metric-item"><span class="metric-dot orange"></span>推理延迟 &lt; 2s</div>
-                    <div class="metric-item"><span class="metric-dot orange"></span>Reranker精排效果</div>
+                    <div class="metric-item"><span class="metric-dot orange"></span>Recall@5 准确率</div>
+                    <div class="metric-item"><span class="metric-dot orange"></span>模型效果/成本</div>
                 </div>
 
                 <div class="metrics-group">
                     <div class="metrics-group-title">基础设施指标</div>
-                    <div class="metric-item"><span class="metric-dot red"></span>K8S集群健康度</div>
-                    <div class="metric-item"><span class="metric-dot red"></span>GPU利用率</div>
-                    <div class="metric-item"><span class="metric-dot red"></span>资源成本控制</div>
+                    <div class="metric-item"><span class="metric-dot"></span>K8S/GPU资源异动</div>
+                    <div class="metric-item"><span class="metric-dot"></span>基础组件可用性</div>
+                    <div class="metric-item"><span class="metric-dot"></span>数据同步延迟</div>
                 </div>
             </div>
-        </div>
-
-        <!-- 系统集成标注 -->
-        <div class="integration-section">
-            <h2 class="section-title">遗留系统集成点</h2>
-            <div class="integration-grid">
-                <div class="integration-item">
-                    <div class="integration-icon">📑</div>
-                    <div class="integration-content">
-                        <h5>企业工单系统</h5>
-                        <p>获取维修工单数据，包含车辆信息、故障描述、维修历史</p>
-                        <span class="api-tag">REST API / 实时同步</span>
-                    </div>
-                </div>
-                <div class="integration-item">
-                    <div class="integration-icon">📜</div>
-                    <div class="integration-content">
-                        <h5>日志采集系统</h5>
-                        <p>获取诊断平板操作记录日志，支持批量导入和实时采集</p>
-                        <span class="api-tag">Kafka / 批量API</span>
-                    </div>
-                </div>
-                <div class="integration-item">
-                    <div class="integration-icon">🔬</div>
-                    <div class="integration-content">
-                        <h5>诊断扫描系统</h5>
-                        <p>获取设备诊断扫描报告、故障代码、数据流快照</p>
-                        <span class="api-tag">REST API / 文件上传</span>
-                    </div>
-                </div>
-                <div class="integration-item">
-                    <div class="integration-icon">📚</div>
-                    <div class="integration-content">
-                        <h5>现有知识库系统</h5>
-                        <p>对接已有维修案例库、技术文档库，实现知识复用</p>
-                        <span class="api-tag">数据库同步 / API</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 模型选型详情 -->
-        <div class="model-detail-section">
-            <h2 class="section-title">模型选型评估</h2>
-            <div class="model-detail-grid">
-                <div class="model-detail-card">
-                    <div class="model-detail-header">
-                        <h4>GPT-4o 大语言模型</h4>
-                        <span>理解 / 生成 / 推理</span>
-                    </div>
-                    <div class="model-detail-body">
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">效果评估</span>
-                            <span class="model-eval-value good">优秀</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">推理延迟</span>
-                            <span class="model-eval-value medium">1-3s</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">成本控制</span>
-                            <span class="model-eval-value medium">中等</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">合规性</span>
-                            <span class="model-eval-value good">符合</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="model-detail-card">
-                    <div class="model-detail-header" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);">
-                        <h4>BGE-M3 向量模型</h4>
-                        <span>Embedding / 语义匹配</span>
-                    </div>
-                    <div class="model-detail-body">
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">效果评估</span>
-                            <span class="model-eval-value good">优秀</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">推理延迟</span>
-                            <span class="model-eval-value good">&lt;100ms</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">成本控制</span>
-                            <span class="model-eval-value good">低</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">部署方式</span>
-                            <span class="model-eval-value good">私有化</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="model-detail-card">
-                    <div class="model-detail-header" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
-                        <h4>BGE-Reranker 重排模型</h4>
-                        <span>召回精排 / 相关性打分</span>
-                    </div>
-                    <div class="model-detail-body">
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">效果评估</span>
-                            <span class="model-eval-value good">显著提升</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">推理延迟</span>
-                            <span class="model-eval-value good">&lt;200ms</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">成本控制</span>
-                            <span class="model-eval-value good">低</span>
-                        </div>
-                        <div class="model-eval-item">
-                            <span class="model-eval-label">Recall提升</span>
-                            <span class="model-eval-value good">+15%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 验收标准 -->
-        <div class="acceptance-section">
-            <div class="acceptance-title">验收标准检查表</div>
-            <table class="acceptance-table">
-                <thead>
-                    <tr>
-                        <th style="width: 140px;">产出物</th>
-                        <th style="width: 120px;">检查项</th>
-                        <th>通过标准</th>
-                        <th style="width: 100px;">状态</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td rowspan="3" class="category">1. 应用架构图</td>
-                        <td class="check-item">四层完整性</td>
-                        <td>前端、应用、数据、模型四层清晰分离，组件归属正确</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td class="check-item">业务与角色</td>
-                        <td>用户角色明确，组件命名包含业务术语，数据流闭环</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td class="check-item">系统集成</td>
-                        <td>明确标注了与现有遗留系统的集成点和交互方式</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3" class="category">2. 模型选型</td>
-                        <td class="check-item">能力覆盖</td>
-                        <td>覆盖意图识别、生成、RAG检索等所有必要AI能力</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td class="check-item">评估维度</td>
-                        <td>包含效果、延迟、成本、合规等多维度的评估理由</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td class="check-item">Reranker</td>
-                        <td>必须包含重排模型（Reranker）的规划（使用独立模型或LLM打分）</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td rowspan="3" class="category">3. 技术栈</td>
-                        <td class="check-item">组件完备性</td>
-                        <td>包含 API 网关、编排引擎、向量库、审计日志等核心基建</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td class="check-item">技术落地性</td>
-                        <td>选型符合团队技术储备，社区生态活跃或有商业支持</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                    <tr>
-                        <td class="check-item">可观测性</td>
-                        <td>包含明确的监控、日志和 Trace 方案设计</td>
-                        <td><span class="status">✓ 通过</span></td>
-                    </tr>
-                </tbody>
-            </table>
         </div>
 
         <!-- 成效指标 -->
